@@ -1,3 +1,3 @@
-def call(){
-  return hello
+def call(test){
+  echo "$test"
 }
