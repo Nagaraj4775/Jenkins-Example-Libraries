@@ -1,4 +1,4 @@
-def getWorkSpace(environment,appName){
+def call(environment,appName){
     if(environment == 'uat'){
         return "/u01/app/prod/build/${environment}/${appName}"
     }
