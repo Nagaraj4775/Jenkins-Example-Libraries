@@ -27,6 +27,7 @@ agent any
 			echo "Calling sub function"
 			testResults(true)
 			echo "$pipelineParams.buildCommand"
+			echo "${BRANCH_NAME}"
 		}
 		}
 	}
