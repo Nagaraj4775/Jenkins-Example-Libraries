@@ -28,6 +28,7 @@ agent any
 			testResults(true)
 			echo "$pipelineParams.buildCommand"
 			echo "${BRANCH_NAME}"
+			echo "${currentBuild.changeSets}"
 		}
 		}
 	}
