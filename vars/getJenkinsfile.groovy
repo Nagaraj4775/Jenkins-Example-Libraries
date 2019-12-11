@@ -2,7 +2,7 @@ def call (){
 pipeline{
 options {
     disableConcurrentBuilds()
-    //skipDefaultCheckout()
+    skipDefaultCheckout()
   }
   environment {
   def committerEmail = "test@transplace.com"
@@ -12,7 +12,10 @@ agent any
 		stage('git clone'){
 			steps{
 			  	script {
-				git credentialsId: 'Bitbucket', url: 'https://NagarajuRapelli@bitbucket.org/NagarajuRapelli/mbp.git'
+				//git credentialsId: 'Bitbucket', url: 'https://NagarajuRapelli@bitbucket.org/NagarajuRapelli/mbp.git'
+				stageName = "${STAGE_NAME}"
+				echo "We are in git clone"	
+					checkout scm	
 			  }
 		    }
 		}
