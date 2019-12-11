@@ -24,6 +24,8 @@ agent any
 	always{
 		script {
 			echo "${committerEmail}"
+			echo "Calling sub function"
+			testResults(true)
 		}
 		}
 	}
