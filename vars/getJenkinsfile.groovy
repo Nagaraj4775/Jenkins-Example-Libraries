@@ -1,3 +1,4 @@
+def call (){
 pipeline{
 options {
     disableConcurrentBuilds()
@@ -24,5 +25,7 @@ agent any
 		}
 	}
 } // Pipeline
+	
+}
 
 
