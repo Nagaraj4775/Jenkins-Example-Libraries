@@ -1,4 +1,4 @@
-def call (){
+def call (Map pipelineParams){
 pipeline{
 options {
     disableConcurrentBuilds()
@@ -26,6 +26,7 @@ agent any
 			echo "${committerEmail}"
 			echo "Calling sub function"
 			testResults(true)
+			echo "$pipelineParams.buildCommand"
 		}
 		}
 	}
