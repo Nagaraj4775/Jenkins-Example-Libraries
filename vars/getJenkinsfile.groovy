@@ -35,7 +35,7 @@ agent any
 				    for (int j = 0; j < entries.length; j++) {
 					def entry = entries[j]
 					echo "${entry.author} on ${new Date(entry.timestamp)}: ${entry.msg}"
-				    }
+				    }	
 				}
 		}
 		}
