@@ -16,6 +16,8 @@ agent any
 				stageName = "${STAGE_NAME}"
 				echo "We are in git clone"	
 					checkout scm	
+					changeSet = build.changeSet
+					echo "${changeSet}"
 			  }
 		    }
 		}
