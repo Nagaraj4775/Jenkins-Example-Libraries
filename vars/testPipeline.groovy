@@ -17,8 +17,9 @@ def call(body){
             }
             stage('sonar Analysis'){
                  when {
-			environment name: 'config.codeAnalysis', value: 'true'
+			environment name: 'config.codeAnalysis', value: true
 		}
+		    
                 steps{
                     script{
                         echo "Running Sonar Analysis..."             
