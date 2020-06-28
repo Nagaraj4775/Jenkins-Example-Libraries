@@ -17,9 +17,10 @@ def call(body){
             }
             stage('sonar Analysis'){
 		when {
-		// Only say hello if a "greeting" is requested
-		expression { 'config.codeAnalysis' == 'true' }
-	    }    
+                    expression {
+                        return config.codeAnalysis == true
+                    }
+                }
 		    
                 steps{
                     script{
