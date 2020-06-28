@@ -7,11 +7,21 @@ def call(body){
     pipeline{
         agent any
         stages{
-            stage('one'){
+            stage('Initialize'){
                 steps{
                     script{
                         echo "Hello"          
                         echo "${config.emailTo}"      
+                    }
+                }
+            }
+            stage('sonar Analysis'){
+                when {
+                    config.publishToArtifactory == true
+                }
+                steps{
+                    script{
+                        echo "Running Sonar Analysis..."             
                     }
                 }
             }
