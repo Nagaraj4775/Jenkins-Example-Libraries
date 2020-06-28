@@ -16,9 +16,10 @@ def call(body){
                 }
             }
             stage('sonar Analysis'){
-                 when {
-			environment name: 'config.codeAnalysis', value: true
-		}
+		when {
+		// Only say hello if a "greeting" is requested
+		expression { 'config.codeAnalysis' == 'true' }
+	    }    
 		    
                 steps{
                     script{
