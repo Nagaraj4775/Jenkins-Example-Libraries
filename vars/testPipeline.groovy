@@ -17,8 +17,8 @@ def call(body){
             }
             stage('sonar Analysis'){
                 when {
-                    config.publishToArtifactory == true
-                }
+					environment name: 'config.publishToArtifactory', value: 'true'
+				}
                 steps{
                     script{
                         echo "Running Sonar Analysis..."             
