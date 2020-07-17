@@ -13,10 +13,10 @@ def call(buildStatus, channelAddr){
   // Override default values based on build status
   if (buildStatus == 'STARTED') {
     color = 'GREEN'
-    colorCode = '#FFFF00'
+    colorCode = '#00FF00'
   } else if (buildStatus == 'SUCCESS') {
     color = 'YELLOW'
-    colorCode = '#00FF00'
+    colorCode = '#FFFF00'
   } else {
     color = 'RED'
     colorCode = '#FF0000'
